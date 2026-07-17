@@ -24,25 +24,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --cream: #191410;
-    --card: #221b15;
-    --espresso: #ece4d9;
-    --roast: #a8998a;
-    --terracotta: #e08a5e;
-    --terracotta-deep: #eba97f;
-    --pine: #93b89f;
-    --line: #2e261f;
-    --line-strong: #3e332a;
+    --cream: #121711;
+    --card: #1a211a;
+    --espresso: #e6eadd;
+    --roast: #9aa78f;
+    --terracotta: #7cc4a2;
+    --terracotta-deep: #9ad6b8;
+    --pine: #d9b35c;
+    --line: #252c22;
+    --line-strong: #37402f;
   }
 
   /* the footer uses the ink color as background, so it needs its own fix here */
   .site-foot {
-    background: #100c09;
-    color: #ece4d9;
+    background: #0b0f0a;
+    color: #e6eadd;
   }
 
   .foot-links a {
-    color: #ece4d9;
+    color: #e6eadd;
   }
 }
 
