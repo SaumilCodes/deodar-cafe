@@ -6,6 +6,8 @@ I built this after finishing Meta's Introduction to Front-End Development and HT
 
 All the food drawings in it are SVGs I made for this project.
 
+Live at [saumilcodes.github.io/deodar-cafe](https://saumilcodes.github.io/deodar-cafe/)
+
 ## Pages
 
 - `index.html` home
