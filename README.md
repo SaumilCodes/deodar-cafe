@@ -4,7 +4,9 @@ A website for a small fictional cafe in Waknaghat, Himachal Pradesh, the town wh
 
 I built this after finishing Meta's Introduction to Front-End Development and HTML and CSS in Depth courses on Coursera, to use as much of them as I could in one project. So it has a booking form with validation styling, a menu with dotted price leaders, an opening hours table, an FAQ that folds using details and summary, CSS Grid and Flexbox layouts, keyframe steam animation, and a dark mode that follows your device.
 
-All the food drawings in it are SVGs I made for this project.
+All the food drawings in it are SVGs I made for this project, including the little map on the homepage.
+
+The look is built around the name: deodar is the Himalayan cedar, so the palette is cedar green and gold on sage paper, with Bricolage Grotesque for headings and Instrument Sans for text.
 
 Live at [saumilcodes.github.io/deodar-cafe](https://saumilcodes.github.io/deodar-cafe/)
 
