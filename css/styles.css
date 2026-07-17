@@ -499,6 +499,17 @@ main > section:not(.hero) {
   margin: 0;
 }
 
+.top-link {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.top-link:hover {
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
 /* menu */
 
 .menu-section + .menu-section {
