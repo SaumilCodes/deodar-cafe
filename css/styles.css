@@ -724,3 +724,30 @@ input:user-valid {
 .after-grid {
   margin-top: 1.5rem;
 }
+
+/* overheard reviews */
+
+.quote-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--terracotta);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+}
+
+.quote p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+
+.quote-who {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--roast);
+}
