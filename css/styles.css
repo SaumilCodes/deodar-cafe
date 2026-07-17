@@ -6,15 +6,15 @@
 /* tokens */
 
 :root {
-  --cream: #f7f2ea;
-  --card: #fffdf8;
-  --espresso: #2d2118;
-  --roast: #6f6154;
-  --terracotta: #c05f33;
-  --terracotta-deep: #9d4a24;
-  --pine: #3d5a45;
-  --line: #e7ddcf;
-  --line-strong: #d6c9b6;
+  --cream: #f0f1e7;
+  --card: #fafbf3;
+  --espresso: #1b2a22;
+  --roast: #5d6b5f;
+  --terracotta: #1f5c46;
+  --terracotta-deep: #154534;
+  --pine: #9a7420;
+  --line: #dee1cf;
+  --line-strong: #c6cbb0;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Karla", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -443,7 +443,7 @@ main > section:not(.hero) {
 .foot-note {
   margin-top: 2rem;
   padding-top: 1.2rem;
-  border-top: 1px solid rgba(247, 242, 234, 0.18);
+  border-top: 1px solid rgba(240, 241, 231, 0.18);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -569,7 +569,7 @@ main > section:not(.hero) {
 
 .tile {
   margin: 0;
-  background: #f3ecdf;
+  background: #eaeddb;
   border: 1px solid var(--line-strong);
   border-radius: 10px;
   padding: 1rem 1rem 0.7rem;
@@ -645,7 +645,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--terracotta);
-  box-shadow: 0 0 0 3px rgba(192, 95, 51, 0.15);
+  box-shadow: 0 0 0 3px rgba(31, 92, 70, 0.15);
 }
 
 textarea {
@@ -696,7 +696,7 @@ textarea:user-invalid:focus {
 }
 
 input:user-valid {
-  border-color: var(--pine);
+  border-color: var(--terracotta);
 }
 
 /* faq */
@@ -812,7 +812,7 @@ input:user-valid {
 .tile:hover {
   transform: translateY(-3px);
   border-color: var(--terracotta);
-  box-shadow: 0 8px 18px rgba(45, 33, 24, 0.08);
+  box-shadow: 0 8px 18px rgba(18, 32, 25, 0.09);
 }
 
 /* wider screens */
