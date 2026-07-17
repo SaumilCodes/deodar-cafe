@@ -34,6 +34,16 @@
     --line: #2e261f;
     --line-strong: #3e332a;
   }
+
+  /* the footer uses the ink color as background, so it needs its own fix here */
+  .site-foot {
+    background: #100c09;
+    color: #ece4d9;
+  }
+
+  .foot-links a {
+    color: #ece4d9;
+  }
 }
 
 /* base */
