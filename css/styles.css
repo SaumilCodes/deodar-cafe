@@ -459,3 +459,18 @@ main > section:not(.hero) {
   margin-top: 0.2rem;
   max-width: 52ch;
 }
+
+.tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pine);
+  background: transparent;
+  border: 1px solid var(--pine);
+  border-radius: 999px;
+  padding: 0.1em 0.6em;
+  margin-left: 0.35em;
+  vertical-align: middle;
+}
