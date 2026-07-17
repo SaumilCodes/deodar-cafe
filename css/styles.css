@@ -861,6 +861,21 @@ input:user-valid {
   }
 }
 
+/* printing the menu should give just the menu */
+
+@media print {
+  .site-head,
+  .site-foot,
+  .skip {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+
 /* respect reduced motion settings */
 
 @media (prefers-reduced-motion: reduce) {
