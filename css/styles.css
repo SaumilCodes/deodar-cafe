@@ -651,3 +651,37 @@ textarea:user-invalid:focus {
 input:user-valid {
   border-color: var(--pine);
 }
+
+/* faq */
+
+.faq-list {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 640px;
+}
+
+.faq-list details {
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 0.9rem 1.15rem;
+}
+
+.faq-list summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-list summary::marker {
+  color: var(--terracotta);
+}
+
+.faq-list details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.faq-list details p {
+  color: var(--roast);
+  font-size: 0.96rem;
+  max-width: 56ch;
+}
