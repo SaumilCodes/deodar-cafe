@@ -635,3 +635,19 @@ textarea {
   font-size: 1rem;
   justify-self: start;
 }
+
+/* show validation state once the user has touched a field */
+
+input:user-invalid,
+textarea:user-invalid {
+  border-color: #b3372c;
+}
+
+input:user-invalid:focus,
+textarea:user-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(179, 55, 44, 0.15);
+}
+
+input:user-valid {
+  border-color: var(--pine);
+}
