@@ -312,3 +312,36 @@ main > section:not(.hero) {
   font-size: 0.97rem;
   color: var(--roast);
 }
+
+/* hours */
+
+.hours-grid {
+  display: grid;
+  gap: 2.2rem;
+}
+
+.hours-grid p {
+  max-width: 48ch;
+}
+
+.hours-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 430px;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 0.6rem 0.2rem;
+  border-bottom: 1px dashed var(--line-strong);
+}
+
+.hours-table th {
+  text-align: left;
+  font-weight: 700;
+}
+
+.hours-table td {
+  text-align: right;
+  color: var(--roast);
+}
