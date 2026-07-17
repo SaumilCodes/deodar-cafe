@@ -539,3 +539,99 @@ main > section:not(.hero) {
   color: var(--roast);
   margin-top: 0.3rem;
 }
+
+/* booking form */
+
+.book-form {
+  max-width: 640px;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.book-form fieldset {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 1.2rem 1.3rem 1.4rem;
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+}
+
+.book-form legend {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding-inline: 0.4em;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label,
+.choice-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.field-row {
+  display: grid;
+  gap: 1rem;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  background: var(--cream);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 0.55em 0.8em;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(192, 95, 51, 0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+}
+
+.choice input {
+  width: auto;
+  accent-color: var(--terracotta);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--roast);
+  margin: 0;
+}
+
+.btn-submit {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  justify-self: start;
+}
