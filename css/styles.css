@@ -685,3 +685,42 @@ input:user-valid {
   font-size: 0.96rem;
   max-width: 56ch;
 }
+
+/* menu teaser on the homepage */
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.teaser-card {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--espresso);
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 1.2rem 1rem 1rem;
+}
+
+.teaser-card img {
+  margin-inline: auto;
+  height: auto;
+}
+
+.teaser-card h3 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.teaser-price {
+  color: var(--roast);
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+
+.after-grid {
+  margin-top: 1.5rem;
+}
