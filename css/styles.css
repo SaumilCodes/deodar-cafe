@@ -474,3 +474,68 @@ main > section:not(.hero) {
   margin-left: 0.35em;
   vertical-align: middle;
 }
+
+/* about page */
+
+.story-grid {
+  display: grid;
+  gap: 2.2rem;
+}
+
+.story-col p {
+  max-width: 52ch;
+}
+
+.story-col p + p {
+  margin-top: 1rem;
+}
+
+.rules-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.rule {
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--pine);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+}
+
+.rule h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.rule p {
+  font-size: 0.95rem;
+  color: var(--roast);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.tile {
+  margin: 0;
+  background: #f3ecdf;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 1rem 1rem 0.7rem;
+  text-align: center;
+}
+
+.tile img {
+  margin-inline: auto;
+  height: auto;
+}
+
+.tile figcaption {
+  font-size: 0.85rem;
+  color: var(--roast);
+  margin-top: 0.3rem;
+}
