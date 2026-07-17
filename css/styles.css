@@ -772,3 +772,19 @@ input:user-valid {
   font-size: 0.85rem;
   color: var(--roast);
 }
+
+/* hover lift on the cards */
+
+.highlight,
+.teaser-card,
+.tile {
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.highlight:hover,
+.teaser-card:hover,
+.tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--terracotta);
+  box-shadow: 0 8px 18px rgba(45, 33, 24, 0.08);
+}
