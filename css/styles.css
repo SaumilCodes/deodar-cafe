@@ -261,3 +261,54 @@ h1 {
   stroke-linecap: round;
   opacity: 0.7;
 }
+
+/* sections shared */
+
+main > section:not(.hero) {
+  padding-block: clamp(2.6rem, 7vw, 4.2rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  margin-bottom: 1.3rem;
+}
+
+.note {
+  color: var(--roast);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* highlights */
+
+.highlight-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.highlight {
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 1.4rem;
+}
+
+.highlight h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight p {
+  font-size: 0.97rem;
+  color: var(--roast);
+}
