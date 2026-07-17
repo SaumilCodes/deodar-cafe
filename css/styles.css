@@ -860,3 +860,16 @@ input:user-valid {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* respect reduced motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
