@@ -16,8 +16,8 @@
   --line: #dee1cf;
   --line-strong: #c6cbb0;
 
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Karla", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --sans: "Instrument Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* dark theme, follows the device setting */
