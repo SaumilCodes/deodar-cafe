@@ -427,6 +427,15 @@ main > section:not(.hero) {
   color: var(--muted);
 }
 
+.map {
+  margin-top: 1.2rem;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+}
+
 /* footer */
 
 .site-foot {
