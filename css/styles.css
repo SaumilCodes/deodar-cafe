@@ -788,3 +788,49 @@ input:user-valid {
   border-color: var(--terracotta);
   box-shadow: 0 8px 18px rgba(45, 33, 24, 0.08);
 }
+
+/* wider screens */
+
+@media (min-width: 600px) {
+  .field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 820px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .highlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teaser-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .quote-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
