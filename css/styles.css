@@ -1,0 +1,21 @@
+/*
+  Deodar Cafe
+  One stylesheet for the whole site. Mobile first.
+*/
+
+/* tokens */
+
+:root {
+  --cream: #f7f2ea;
+  --card: #fffdf8;
+  --espresso: #2d2118;
+  --roast: #6f6154;
+  --terracotta: #c05f33;
+  --terracotta-deep: #9d4a24;
+  --pine: #3d5a45;
+  --line: #e7ddcf;
+  --line-strong: #d6c9b6;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Karla", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
