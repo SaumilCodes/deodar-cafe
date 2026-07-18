@@ -790,12 +790,16 @@ input:user-valid {
 /* menu teaser on the homepage */
 
 .teaser-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
 }
 
 .teaser-card {
+  flex: 0 0 64%;
+  scroll-snap-align: start;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -903,7 +907,10 @@ input:user-valid {
   }
 
   .teaser-grid {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    overflow: visible;
+    padding-bottom: 0;
   }
 
   .quote-grid {
