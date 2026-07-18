@@ -628,11 +628,17 @@ main > section:not(.hero) {
   border-radius: 10px;
   padding: 1rem 1rem 0.7rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .tile img {
   margin-inline: auto;
   height: auto;
+  transition: transform 0.25s ease;
+}
+
+.tile:hover img {
+  transform: scale(1.07);
 }
 
 .tile figcaption {
