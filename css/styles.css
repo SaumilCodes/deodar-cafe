@@ -777,10 +777,28 @@ input:user-valid {
 .faq-list summary {
   font-weight: 700;
   cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-.faq-list summary::marker {
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  font-family: var(--display);
+  font-size: 1.25rem;
+  line-height: 1;
   color: var(--brand);
+  transition: transform 0.2s ease;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(45deg);
 }
 
 .faq-list details[open] summary {
