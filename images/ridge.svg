@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Deodar trees and Himalayan ridges at dusk, with the lit window of the cafe">
+  <defs>
+    <clipPath id="arch">
+      <path d="M0 520 V210 A210 210 0 0 1 420 210 V520 Z"/>
+    </clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a4b"/>
+      <stop offset="0.45" stop-color="#3f6b6a"/>
+      <stop offset="0.78" stop-color="#c98a52"/>
+      <stop offset="1" stop-color="#e8b06a"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5d7f7c"/>
+      <stop offset="1" stop-color="#46655f"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#33544a"/>
+      <stop offset="1" stop-color="#24413a"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#arch)">
+    <rect width="420" height="520" fill="url(#sky)"/>
+
+    <circle cx="296" cy="330" r="34" fill="#f6d79b" opacity="0.92"/>
+
+    <!-- far ridge -->
+    <path d="M0 352 L54 310 L96 338 L150 288 L206 340 L252 306 L310 348 L364 316 L420 350 V520 H0 Z" fill="url(#far)" opacity="0.85"/>
+
+    <!-- middle ridge -->
+    <path d="M0 396 L62 356 L118 392 L178 344 L236 390 L296 356 L352 394 L420 362 V520 H0 Z" fill="url(#mid)"/>
+
+    <!-- near slope -->
+    <path d="M0 452 L70 424 L150 452 L240 420 L330 452 L420 428 V520 H0 Z" fill="#16302a"/>
+
+    <!-- deodar trees, layered front to back -->
+    <g fill="#1c3b31">
+      <path d="M74 300 l19 46 h-11 l15 40 h-13 l17 44 h-54 l17 -44 h-13 l15 -40 h-11 z"/>
+      <path d="M348 318 l16 40 h-9 l13 34 h-11 l14 38 h-46 l14 -38 h-11 l13 -34 h-9 z"/>
+    </g>
+    <g fill="#122b23">
+      <path d="M130 336 l22 54 h-13 l18 46 h-15 l20 50 h-64 l20 -50 h-15 l18 -46 h-13 z"/>
+      <path d="M292 348 l18 44 h-10 l15 38 h-12 l16 42 h-54 l16 -42 h-12 l15 -38 h-10 z"/>
+      <path d="M210 322 l24 58 h-14 l20 50 h-16 l22 54 h-70 l22 -54 h-16 l20 -50 h-14 z"/>
+    </g>
+
+    <!-- the cafe, one lit window -->
+    <g>
+      <path d="M158 470 h60 v42 h-60 z" fill="#0e211c"/>
+      <path d="M152 470 l36 -26 l36 26 z" fill="#0a1a16"/>
+      <rect x="172" y="482" width="16" height="14" fill="#f3c576"/>
+      <rect x="196" y="482" width="12" height="14" fill="#e0a95d" opacity="0.75"/>
+      <rect x="176" y="440" width="7" height="18" fill="#0a1a16"/>
+      <path class="smoke" d="M179 438 c-7 -12 7 -17 0 -29" fill="none" stroke="#dfe3d8" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    </g>
+  </g>
+
+  <path d="M0 520 V210 A210 210 0 0 1 420 210 V520" fill="none" stroke="#0f1d18" stroke-width="4" opacity="0.5"/>
+
+  <style>
+    .smoke { animation: rise 4s ease-in-out infinite; }
+    @keyframes rise {
+      0%, 100% { transform: translateY(0); opacity: 0.2; }
+      50% { transform: translateY(-8px); opacity: 0.55; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .smoke { animation: none; }
+    }
+  </style>
+</svg>
