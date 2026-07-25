@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
 
@@ -47,17 +47,10 @@
             <a class="btn btn-ghost" href="book.html">Book a table</a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg class="mug" viewBox="0 0 320 300" focusable="false">
-            <ellipse cx="150" cy="266" rx="120" ry="14" fill="var(--line)"/>
-            <path class="steam" d="M118 118 c-10 -18 10 -26 0 -44 c-8 -16 8 -24 2 -38"/>
-            <path class="steam steam-2" d="M156 112 c-10 -18 10 -26 0 -44 c-8 -16 8 -24 2 -38"/>
-            <path class="steam steam-3" d="M194 118 c-10 -18 10 -26 0 -44 c-8 -16 8 -24 2 -38"/>
-            <path d="M62 140 h176 v50 a88 88 0 0 1 -176 0 z" fill="var(--brand)"/>
-            <path d="M240 154 h14 a26 26 0 0 1 0 52 h-20" fill="none" stroke="var(--brand)" stroke-width="13"/>
-            <ellipse cx="150" cy="140" rx="88" ry="13" fill="var(--ink)"/>
-          </svg>
-        </div>
+        <figure class="hero-art">
+          <img src="images/ridge.svg" alt="Deodar trees and Himalayan ridges at dusk, with the lit window of the cafe" width="420" height="520">
+          <figcaption>The ridge behind the building, about six in the evening.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -169,6 +162,23 @@
           <p class="note">Buses from Solan and Shimla stop right outside.</p>
           <img class="map" src="images/find-us.svg" alt="Hand drawn map showing the cafe on the main road, with a pin above the general store" width="400" height="220">
         </div>
+      </div>
+    </section>
+
+    <section class="busy">
+      <div class="container">
+        <h2 class="section-title">How busy we usually are</h2>
+        <p class="note">Rough counts from the counter on a normal weekday. Weekends run heavier all day.</p>
+        <ul class="busy-chart">
+          <li style="--level: 25"><span class="bar"></span><span class="hour">9am</span></li>
+          <li style="--level: 40"><span class="bar"></span><span class="hour">11am</span></li>
+          <li style="--level: 72"><span class="bar"></span><span class="hour">1pm</span></li>
+          <li style="--level: 48"><span class="bar"></span><span class="hour">3pm</span></li>
+          <li style="--level: 66"><span class="bar"></span><span class="hour">5pm</span></li>
+          <li class="peak" style="--level: 100"><span class="bar"></span><span class="hour">7pm</span></li>
+          <li style="--level: 78"><span class="bar"></span><span class="hour">9pm</span></li>
+        </ul>
+        <p class="note">Seven in the evening is the crush. Come at three if you want the window seat.</p>
       </div>
     </section>
 
