@@ -992,11 +992,195 @@ main > section + section:not(.hero) {
   }
 }
 
+/* booking form */
+
+.book-form {
+  max-width: 660px;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.book-form fieldset {
+  display: grid;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 1.5rem 1.6rem 1.7rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.book-form legend {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  padding-inline: 0.5em;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label,
+.choice-label {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.field-row {
+  display: grid;
+  gap: 1.1rem;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 0.65em 0.9em;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(31, 92, 70, 0.16);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.choice input {
+  width: auto;
+  accent-color: var(--brand);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.btn-submit {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  justify-self: start;
+  width: auto;
+}
+
+/* show validation state once a field has been touched */
+
+input:user-invalid,
+textarea:user-invalid {
+  border-color: #b3372c;
+}
+
+input:user-invalid:focus,
+textarea:user-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(179, 55, 44, 0.16);
+}
+
+input:user-valid {
+  border-color: var(--brand);
+}
+
+/* faq */
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 660px;
+}
+
+.faq-list details {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-list details[open] {
+  box-shadow: var(--shadow);
+}
+
+.faq-list summary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  font-family: var(--display);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-list details[open] summary {
+  margin-bottom: 0.6rem;
+}
+
+.faq-list details p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  max-width: 56ch;
+}
+
 /* wider screens */
 
 @media (min-width: 640px) {
   .highlight-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .field-row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1022,6 +1206,14 @@ main > section + section:not(.hero) {
 
   .quote-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
