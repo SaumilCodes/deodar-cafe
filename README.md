@@ -2,11 +2,18 @@
 
 A website for a small fictional cafe in Waknaghat, Himachal Pradesh, the town where my university is. Four pages, one stylesheet, no JavaScript and no frameworks.
 
-I built this after finishing Meta's Introduction to Front-End Development and HTML and CSS in Depth courses on Coursera, to use as much of them as I could in one project. So it has a booking form with validation styling, a menu with dotted price leaders, an opening hours table, an FAQ that folds using details and summary, CSS Grid and Flexbox layouts, keyframe steam animation, and a dark mode that follows your device.
+I built this after finishing Meta's Introduction to Front-End Development and HTML and CSS in Depth courses on Coursera, to use as much of them as I could in one project. It has since been rebuilt once, with a warmer palette, a serif for the headings and a few features I wanted to try without reaching for JavaScript.
 
-All the food drawings in it are SVGs I made for this project, including the little map on the homepage.
+## Things worth pointing at
 
-The look is built around the name: deodar is the Himalayan cedar, so the palette is cedar green and gold on sage paper, with Bricolage Grotesque for headings and Instrument Sans for text.
+- **Menu filter.** The chips at the top of the menu page hide and show categories. Five radio buttons, and CSS picks what stays visible with `#cat-chai:checked ~ .menu-body .menu-section:not(.is-chai) { display: none; }`.
+- **Lightbox.** Clicking a drawing on the About page opens it full size. Each overlay has an id, and `.lightbox:target` shows the one whose id is in the address bar. Closing it is just a link back to `#gallery`.
+- **FAQ.** Plain `details` and `summary`, with the marker swapped for a plus that rotates into a cross.
+- **Booking form.** Fieldsets, a phone pattern, date and time inputs, and validation colours that only appear after you have touched a field, using `:user-valid` and `:user-invalid`.
+- **Scrolling notice band** on the home page, two copies of the same line sliding left, paused on hover.
+- **Dark mode** that follows the device, and reduced motion turns the animations off.
+
+All the food drawings are SVGs I made for this project, including the little map on the home page.
 
 Live at [saumilcodes.github.io/deodar-cafe](https://saumilcodes.github.io/deodar-cafe/)
 
