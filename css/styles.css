@@ -907,8 +907,13 @@ main > section + section:not(.hero) {
 
 /* menu */
 
+.menu-body {
+  display: grid;
+  gap: 3.2rem 3.5rem;
+}
+
 .menu-section + .menu-section {
-  margin-top: 3.5rem;
+  margin-top: 0;
 }
 
 .menu-heading {
@@ -924,7 +929,6 @@ main > section + section:not(.hero) {
   padding: 0;
   display: grid;
   gap: 1.3rem;
-  max-width: 660px;
 }
 
 .dish {
@@ -1273,6 +1277,12 @@ input:user-valid {
 
   .gallery-grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* a real menu reads in two columns once there is room */
+  .menu-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
   }
 }
 
