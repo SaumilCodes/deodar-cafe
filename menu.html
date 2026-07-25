@@ -44,9 +44,26 @@
     </section>
 
     <section class="menu" aria-label="Menu">
-      <div class="container">
+      <div class="container menu-filter">
 
-        <div class="menu-section">
+        <!-- one radio per category, the checked one decides what stays visible -->
+        <input type="radio" name="menu-cat" id="cat-all" checked>
+        <input type="radio" name="menu-cat" id="cat-coffee">
+        <input type="radio" name="menu-cat" id="cat-chai">
+        <input type="radio" name="menu-cat" id="cat-bites">
+        <input type="radio" name="menu-cat" id="cat-sweet">
+
+        <div class="filter-row">
+          <label class="filter-chip" for="cat-all">Everything</label>
+          <label class="filter-chip" for="cat-coffee">Coffee</label>
+          <label class="filter-chip" for="cat-chai">Chai</label>
+          <label class="filter-chip" for="cat-bites">Quick bites</label>
+          <label class="filter-chip" for="cat-sweet">Something sweet</label>
+        </div>
+
+        <div class="menu-body">
+
+        <div class="menu-section is-coffee">
           <h2 class="menu-heading">Coffee</h2>
           <ul class="menu-list">
             <li>
@@ -96,7 +113,7 @@
           </ul>
         </div>
 
-        <div class="menu-section">
+        <div class="menu-section is-chai">
           <h2 class="menu-heading">Chai</h2>
           <ul class="menu-list">
             <li>
@@ -138,7 +155,7 @@
           </ul>
         </div>
 
-        <div class="menu-section">
+        <div class="menu-section is-bites">
           <h2 class="menu-heading">Quick bites</h2>
           <ul class="menu-list">
             <li>
@@ -202,7 +219,7 @@
           </ul>
         </div>
 
-        <div class="menu-section">
+        <div class="menu-section is-sweet">
           <h2 class="menu-heading">Something sweet</h2>
           <ul class="menu-list">
             <li>
@@ -236,6 +253,8 @@
               </div>
             </li>
           </ul>
+        </div>
+
         </div>
 
         <p class="note">The whole menu is vegetarian. Jain options on request.</p>
