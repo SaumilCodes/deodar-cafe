@@ -686,6 +686,152 @@ main > section + section:not(.hero) {
   color: inherit;
 }
 
+/* menu */
+
+.menu-section + .menu-section {
+  margin-top: 3.5rem;
+}
+
+.menu-heading {
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--line-strong);
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.3rem;
+  max-width: 660px;
+}
+
+.dish {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.dish-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.dots {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--line-strong);
+  transform: translateY(-4px);
+}
+
+.price {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.dish-desc {
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin-top: 0.25rem;
+  max-width: 52ch;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  padding: 0.15em 0.6em;
+  margin-left: 0.4em;
+  vertical-align: 0.12em;
+}
+
+/* the category filter, radios drive which sections stay on screen */
+
+.menu-filter > input {
+  position: absolute;
+  left: -999px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.8rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.filter-chip {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5em 1.1em;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+#cat-all:checked ~ .filter-row .filter-chip[for="cat-all"],
+#cat-coffee:checked ~ .filter-row .filter-chip[for="cat-coffee"],
+#cat-chai:checked ~ .filter-row .filter-chip[for="cat-chai"],
+#cat-bites:checked ~ .filter-row .filter-chip[for="cat-bites"],
+#cat-sweet:checked ~ .filter-row .filter-chip[for="cat-sweet"] {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+#cat-all:focus-visible ~ .filter-row .filter-chip[for="cat-all"],
+#cat-coffee:focus-visible ~ .filter-row .filter-chip[for="cat-coffee"],
+#cat-chai:focus-visible ~ .filter-row .filter-chip[for="cat-chai"],
+#cat-bites:focus-visible ~ .filter-row .filter-chip[for="cat-bites"],
+#cat-sweet:focus-visible ~ .filter-row .filter-chip[for="cat-sweet"] {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* hide whatever does not match the picked category */
+#cat-coffee:checked ~ .menu-body .menu-section:not(.is-coffee),
+#cat-chai:checked ~ .menu-body .menu-section:not(.is-chai),
+#cat-bites:checked ~ .menu-body .menu-section:not(.is-bites),
+#cat-sweet:checked ~ .menu-body .menu-section:not(.is-sweet) {
+  display: none;
+}
+
+/* whatever is left sits at the top, so drop the stacking margin */
+#cat-coffee:checked ~ .menu-body .menu-section,
+#cat-chai:checked ~ .menu-body .menu-section,
+#cat-bites:checked ~ .menu-body .menu-section,
+#cat-sweet:checked ~ .menu-body .menu-section {
+  margin-top: 0;
+  animation: fade-in 0.35s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* wider screens */
 
 @media (min-width: 640px) {
