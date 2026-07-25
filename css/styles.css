@@ -27,16 +27,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14180f;
-    --card: #1c2117;
+    --bg: #12160e;
+    --card: #1e2419;
     --ink: #ece7d8;
     --muted: #9aa28f;
     --brand: #7fc0a0;
     --brand-deep: #a2d7bb;
     --accent: #e29063;
     --gold: #d8ae4c;
-    --line: #262c1f;
-    --line-strong: #38402d;
+    --line: #333a2a;
+    --line-strong: #48513a;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.35);
     --shadow-lift: 0 4px 8px rgba(0, 0, 0, 0.35), 0 18px 40px rgba(0, 0, 0, 0.45);
   }
@@ -54,7 +54,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  /* a faint speckle so the paper is not a flat slab of colour */
+  background-image: radial-gradient(rgba(120, 110, 80, 0.09) 1px, transparent 1px);
+  background-size: 4px 4px;
   color: var(--ink);
   font-family: var(--body);
   font-size: 1.0625rem;
@@ -278,6 +281,7 @@ a:hover {
 .hero {
   position: relative;
   overflow: hidden;
+  padding-block: 0;
 }
 
 /* a soft warm glow behind the hero */
@@ -297,7 +301,7 @@ a:hover {
   display: grid;
   gap: 2.5rem;
   align-items: center;
-  padding-block: clamp(3rem, 9vw, 6rem);
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 h1 {
@@ -321,43 +325,24 @@ h1 {
 }
 
 .hero-art {
-  max-width: 340px;
+  margin: 0;
+  max-width: 420px;
   margin-inline: auto;
 }
 
-.mug {
+.hero-art img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 18px 26px rgba(27, 43, 33, 0.16));
+  border-radius: 210px 210px 14px 14px;
+  box-shadow: 0 20px 50px rgba(15, 29, 24, 0.3);
 }
 
-.steam {
-  fill: none;
-  stroke: var(--line-strong);
-  stroke-width: 7;
-  stroke-linecap: round;
-  opacity: 0.7;
-  animation: drift 3s ease-in-out infinite;
-}
-
-.steam-2 {
-  animation-delay: 0.6s;
-}
-
-.steam-3 {
-  animation-delay: 1.2s;
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translateY(-9px);
-    opacity: 0.7;
-  }
+.hero-art figcaption {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+  font-style: italic;
 }
 
 /* the scrolling notice band */
@@ -380,11 +365,11 @@ h1 {
 
 .ticker-items {
   margin: 0;
-  padding-block: 0.7rem;
+  padding-block: 1rem;
   white-space: nowrap;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
 }
 
 @keyframes slide {
@@ -588,6 +573,58 @@ main > section + section:not(.hero) {
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow);
+}
+
+/* the busy chart, each bar reads its height off a custom property */
+
+.busy-chart {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 0.5rem;
+  align-items: end;
+  max-width: 640px;
+}
+
+.busy-chart li {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+}
+
+/* the bar is drawn at full height straight away.
+   an entrance animation would hide the numbers if it never ran. */
+.bar {
+  width: 100%;
+  height: calc(var(--level) * 1.7px);
+  background: var(--brand);
+  border-radius: 8px 8px 3px 3px;
+  opacity: 0.55;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.busy-chart li:hover .bar {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.peak .bar {
+  background: var(--accent);
+  opacity: 1;
+}
+
+.hour {
+  font-size: 0.76rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.peak .hour {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* the sticky note quotes */
