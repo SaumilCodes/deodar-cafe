@@ -95,32 +95,88 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="container">
         <h2 class="section-title">From the counter</h2>
         <p class="note">Drawings by us, since none of our photos do the food justice.</p>
         <div class="gallery-grid">
           <figure class="tile">
-            <img src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200">
+            <a class="tile-link" href="#shot-coffee" aria-label="Open the cappuccino drawing">
+              <img src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200">
+            </a>
             <figcaption>The cappuccino</figcaption>
           </figure>
           <figure class="tile">
-            <img src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200">
+            <a class="tile-link" href="#shot-chai" aria-label="Open the adrak chai drawing">
+              <img src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200">
+            </a>
             <figcaption>Adrak chai</figcaption>
           </figure>
           <figure class="tile">
-            <img src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200">
+            <a class="tile-link" href="#shot-momos" aria-label="Open the momos drawing">
+              <img src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200">
+            </a>
             <figcaption>Steamed momos</figcaption>
           </figure>
           <figure class="tile">
-            <img src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200">
+            <a class="tile-link" href="#shot-maggi" aria-label="Open the cheese maggi drawing">
+              <img src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200">
+            </a>
             <figcaption>Cheese maggi</figcaption>
           </figure>
           <figure class="tile">
-            <img src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200">
+            <a class="tile-link" href="#shot-brownie" aria-label="Open the brownie drawing">
+              <img src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200">
+            </a>
             <figcaption>The brownie</figcaption>
           </figure>
         </div>
+      </div>
+
+      <!-- each one opens when its id is in the address bar, closed again by the x -->
+      <div class="lightbox" id="shot-coffee">
+        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
+        <figure class="lightbox-inner">
+          <img src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200">
+          <figcaption>The cappuccino, ₹140</figcaption>
+        </figure>
+        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
+      </div>
+
+      <div class="lightbox" id="shot-chai">
+        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
+        <figure class="lightbox-inner">
+          <img src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200">
+          <figcaption>Adrak chai, ₹40</figcaption>
+        </figure>
+        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
+      </div>
+
+      <div class="lightbox" id="shot-momos">
+        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
+        <figure class="lightbox-inner">
+          <img src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200">
+          <figcaption>Steamed veg momos, ₹80</figcaption>
+        </figure>
+        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
+      </div>
+
+      <div class="lightbox" id="shot-maggi">
+        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
+        <figure class="lightbox-inner">
+          <img src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200">
+          <figcaption>Cheese maggi, ₹80</figcaption>
+        </figure>
+        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
+      </div>
+
+      <div class="lightbox" id="shot-brownie">
+        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
+        <figure class="lightbox-inner">
+          <img src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200">
+          <figcaption>Chocolate brownie, ₹120</figcaption>
+        </figure>
+        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
       </div>
     </section>
 
