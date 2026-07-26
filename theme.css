@@ -403,3 +403,48 @@ details.faq-item summary:hover { color: var(--orange); }
   .bg-dark-pine, .site-footer, .card-dark { background: #fff !important; color: #000 !important; }
   .bg-dark-pine::before, .bg-dark-pine::after { display: none; }
 }
+
+/* ---------------------------------------------------------------------------
+   Narrow screens.
+   The navbar deliberately has no hamburger, because collapsing one needs
+   Bootstrap's JavaScript. So below 576px the bar wraps onto a second row
+   instead of pushing the day/dusk switch off the side of the page.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 575.98px) {
+  .site-nav .container-xxl {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .site-nav .navbar-brand {
+    margin-right: 0;
+  }
+
+  .site-nav .navbar-nav {
+    order: 3;
+    flex: 1 1 100%;
+    margin-left: 0 !important;
+    justify-content: flex-start;
+  }
+
+  .mode-switch {
+    order: 2;
+    margin-left: auto !important;
+  }
+
+  /* wide gutters leave the row wider than the container it sits in */
+  .row {
+    --bs-gutter-x: 1.5rem;
+  }
+
+  /* 44px headlines do not fit a phone, and they clip outright if the
+     webfont falls back to a wider serif */
+  h1 {
+    font-size: clamp(1.9rem, 8.4vw, 2.4rem);
+  }
+
+  h1, h2, h3, p {
+    overflow-wrap: break-word;
+  }
+}
