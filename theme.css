@@ -448,3 +448,62 @@ details.faq-item summary:hover { color: var(--orange); }
     overflow-wrap: break-word;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Stand-first.
+   The paragraph under each headline used to be a flat block of dim body text
+   that read like filler. It is now set in the display serif, brighter, and
+   hung off a short rule so it looks like a deliberate stand-first.
+   --------------------------------------------------------------------------- */
+
+.lede {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.6rem);
+  line-height: 1.4;
+  max-width: 36ch;
+  padding-left: 1.15rem;
+  border-left: 2px solid var(--orange);
+}
+
+.lede.text-light-soft {
+  color: rgba(243, 234, 217, 0.88) !important;
+}
+
+/* A row of short facts, for the heroes that carry no numbers of their own. */
+
+.fact-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.6rem 0 0;
+  padding: 0;
+}
+
+.fact {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(243, 234, 217, 0.82);
+  border: 1px solid rgba(243, 234, 217, 0.22);
+  border-radius: 999px;
+  padding: 0.45em 0.95em;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.fact:hover {
+  border-color: var(--mustard);
+  color: rgba(243, 234, 217, 1);
+}
+
+.fact::before {
+  content: "";
+  display: inline-block;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--mustard);
+  margin-right: 0.55em;
+  vertical-align: 0.09em;
+}
