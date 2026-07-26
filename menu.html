@@ -3,288 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
   <title>Menu · Deodar Cafe</title>
   <meta name="description" content="The Deodar Cafe menu. Coffee, chai, quick bites and desserts with honest prices.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f5c46'/%3E%3Ctext x='50' y='72' font-size='58' font-weight='bold' text-anchor='middle' fill='%23f7f2ea' font-family='Georgia, serif'%3ED%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
 </head>
-<body>
+<body id="top">
 
-  <a class="skip" href="#main">Skip to content</a>
+<!-- Theme anchors. A link to #dusk targets the second one, which flips every
+     token in theme.css. #day un-targets it. No JavaScript involved. -->
+<i class="theme-anchor" id="day"></i>
+<i class="theme-anchor" id="dusk"></i>
 
-  <header class="site-head" id="top">
-    <div class="container nav">
-      <a class="brand" href="index.html">Deodar<span class="brand-mark">.</span></a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html" aria-current="page">Menu</a></li>
+<div class="page">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="navbar navbar-expand site-nav sticky-top" aria-label="Primary">
+  <div class="container-xxl">
+    <a class="navbar-brand brand t-light-inline" href="index.html">Deodar.</a>
+    <a class="navbar-brand brand t-dark-inline" href="index.html#dusk">Deodar.</a>
+
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-light-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link d-none d-sm-inline" href="about.html">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" href="book.html">Book</a></li>
+    </ul>
+
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-dark-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html#dusk">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html#dusk">Menu</a></li>
+      <li class="nav-item"><a class="nav-link d-none d-sm-inline" href="about.html#dusk">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" href="book.html#dusk">Book</a></li>
+    </ul>
+      <span class="mode-switch ms-3" title="Day / dusk theme">
+        <span class="mode-label t-light-inline">Day</span>
+        <span class="mode-label t-dark-inline">Dusk</span>
+        <span class="switch-track" aria-hidden="true"><span class="switch-knob"></span></span>
+        <a class="switch-hit t-light-inline" href="#dusk" aria-label="Switch to the dusk theme"></a>
+        <a class="switch-hit t-dark-inline" href="#day" aria-label="Switch to the day theme"></a>
+      </span>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="bg-dark-pine pt-5 pb-0">
+    <div class="container-xxl py-lg-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">The menu</p>
+          <h1 class="mb-4">Nothing fancy, everything fresh.</h1>
+          <p class="lede text-light-soft mb-0">Prices include tax. The whole menu is vegetarian and anything marked veg is cooked on its own tawa. If you want your maggi soupy, just say so.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end d-none d-lg-block">
+          <img class="illo-lg ms-auto drift" src="images/chai-glass.svg" alt="" width="200" height="200" style="width:150px;height:150px">
+        </div>
+      </div>
+      <div class="pt-5"></div>
+    </div>
+    <div class="ridge-edge"></div>
+  </section>
+
+  <div class="container-xxl">
+
+    <input class="filter-input" type="radio" name="course" id="f-all" checked>
+    <input class="filter-input" type="radio" name="course" id="f-coffee">
+    <input class="filter-input" type="radio" name="course" id="f-chai">
+    <input class="filter-input" type="radio" name="course" id="f-bites">
+    <input class="filter-input" type="radio" name="course" id="f-sweet">
+
+    <div class="filter-bar" role="group" aria-label="Filter the menu by course">
+      <label for="f-all">Everything</label>
+      <label for="f-coffee">Coffee</label>
+      <label for="f-chai">Chai</label>
+      <label for="f-bites">Quick bites</label>
+      <label for="f-sweet">Something sweet</label>
+    </div>
+
+    <div class="menu-body py-5">
+
+      <section class="course pb-5" id="coffee">
+        <div class="course-head mb-4">
+          <img class="illo-sm" src="images/coffee-cup.svg" alt="" width="200" height="200">
+          <h2 class="mb-0">Coffee</h2>
+        </div>
+        <div class="row"><div class="col-xl-10">
+          <div class="dish"><p class="dish__name">Espresso</p><p class="dish__price">₹90</p></div>
+          <div class="dish"><p class="dish__name">Americano</p><p class="dish__price">₹110</p></div>
+          <div class="dish"><p class="dish__name">Cappuccino <span class="badge badge-pop">Popular</span></p><p class="dish__price">₹140</p><p class="dish__desc">Beans from Chikmagalur, dusted with cocoa.</p></div>
+          <div class="dish"><p class="dish__name">Cafe latte</p><p class="dish__price">₹150</p></div>
+          <div class="dish"><p class="dish__name">Mocha</p><p class="dish__price">₹170</p></div>
+          <div class="dish"><p class="dish__name">Cold coffee</p><p class="dish__price">₹160</p><p class="dish__desc">With a scoop of vanilla, add ₹30.</p></div>
+        </div></div>
+      </section>
+
+      <section class="course pb-5" id="chai">
+        <div class="course-head mb-4">
+          <img class="illo-sm" src="images/chai-glass.svg" alt="" width="200" height="200">
+          <h2 class="mb-0">Chai</h2>
+        </div>
+        <div class="row"><div class="col-xl-10">
+          <div class="dish"><p class="dish__name">Kadak chai</p><p class="dish__price">₹30</p></div>
+          <div class="dish"><p class="dish__name">Adrak chai <span class="badge badge-pop">Popular</span></p><p class="dish__price">₹40</p></div>
+          <div class="dish"><p class="dish__name">Masala chai</p><p class="dish__price">₹50</p></div>
+          <div class="dish"><p class="dish__name">Lemon honey ginger</p><p class="dish__price">₹60</p><p class="dish__desc">The one to order when the weather turns.</p></div>
+          <div class="dish"><p class="dish__name">Green tea</p><p class="dish__price">₹50</p></div>
+        </div></div>
+      </section>
+
+      <section class="course pb-5" id="bites">
+        <div class="course-head mb-4">
+          <img class="illo-sm" src="images/momos.svg" alt="" width="200" height="200">
+          <h2 class="mb-0">Quick bites</h2>
+        </div>
+        <div class="row"><div class="col-xl-10">
+          <div class="dish"><p class="dish__name">Plain maggi</p><p class="dish__price">₹40</p></div>
+          <div class="dish"><p class="dish__name">Veg maggi</p><p class="dish__price">₹60</p></div>
+          <div class="dish"><p class="dish__name">Cheese maggi <span class="badge badge-pop">Popular</span></p><p class="dish__price">₹80</p><p class="dish__desc">Ask for it soupy. Trust us.</p></div>
+          <div class="dish"><p class="dish__name">Steamed veg momos</p><p class="dish__price">₹80</p><p class="dish__desc">Eight pieces, red chutney on the side.</p></div>
+          <div class="dish"><p class="dish__name">Fried paneer momos</p><p class="dish__price">₹110</p></div>
+          <div class="dish"><p class="dish__name">Grilled veg sandwich</p><p class="dish__price">₹90</p></div>
+          <div class="dish"><p class="dish__name">Bun maska</p><p class="dish__price">₹40</p></div>
+          <div class="dish"><p class="dish__name">Masala fries</p><p class="dish__price">₹90</p></div>
+        </div></div>
+      </section>
+
+      <section class="course" id="sweet">
+        <div class="course-head mb-4">
+          <img class="illo-sm" src="images/brownie.svg" alt="" width="200" height="200">
+          <h2 class="mb-0">Something sweet</h2>
+        </div>
+        <div class="row"><div class="col-xl-10">
+          <div class="dish"><p class="dish__name">Chocolate brownie <span class="badge badge-pop">Popular</span></p><p class="dish__price">₹120</p><p class="dish__desc">Served warm. Add a scoop of vanilla for ₹40.</p></div>
+          <div class="dish"><p class="dish__name">Banana bread</p><p class="dish__price">₹80</p></div>
+          <div class="dish"><p class="dish__name">Oat cookies</p><p class="dish__price">₹30</p><p class="dish__desc">Baked every morning, gone by evening.</p></div>
+          <div class="dish"><p class="dish__name">Gajar halwa <span class="badge badge-cool">Winter only</span></p><p class="dish__price">₹90</p></div>
+        </div></div>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="bg-dark-pine py-5">
+    <div class="container text-center py-lg-4" style="max-width:46rem">
+      <p class="serif-italic mb-4" style="font-size:clamp(1.4rem,1rem + 1.6vw,2rem);line-height:1.3;color:#fdf8ee">The whole menu is vegetarian. Jain options on request, just ask at the counter.</p>
+      <a class="btn btn-primary btn-lg t-light-inline" href="book.html">Book a table</a>
+      <a class="btn btn-primary btn-lg t-dark-inline" href="book.html#dusk">Book a table</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer pt-5 pb-4">
+  <div class="container-xxl">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-5">
+        <span class="brand d-block" style="font-size:1.6rem">Deodar.</span>
+        <address class="mt-3 mb-0 small text-light-faint" style="font-style:normal">Above the general store, Waknaghat main road,<br>Solan, Himachal Pradesh 173234</address>
+      </div>
+      <div class="col-6 col-lg-4">
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-light-grid">
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a class="nav-cta" href="book.html">Book a table</a></li>
+          <li><a href="book.html">Book a table</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <section class="page-head">
-      <div class="container">
-        <p class="eyebrow">The menu</p>
-        <h1>Nothing fancy, everything fresh.</h1>
-        <p class="lede">
-          Prices include tax. Anything marked veg is cooked on its own tawa.
-          If you want your maggi soupy, just say so.
-        </p>
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-dark-grid">
+          <li><a href="menu.html#dusk">Menu</a></li>
+          <li><a href="about.html#dusk">About</a></li>
+          <li><a href="book.html#dusk">Book a table</a></li>
+        </ul>
       </div>
-    </section>
-
-    <section class="menu" aria-label="Menu">
-      <div class="container menu-filter">
-
-        <!-- one radio per category, the checked one decides what stays visible -->
-        <input type="radio" name="menu-cat" id="cat-all" checked>
-        <input type="radio" name="menu-cat" id="cat-coffee">
-        <input type="radio" name="menu-cat" id="cat-chai">
-        <input type="radio" name="menu-cat" id="cat-bites">
-        <input type="radio" name="menu-cat" id="cat-sweet">
-
-        <div class="filter-row">
-          <label class="filter-chip" for="cat-all">Everything</label>
-          <label class="filter-chip" for="cat-coffee">Coffee</label>
-          <label class="filter-chip" for="cat-chai">Chai</label>
-          <label class="filter-chip" for="cat-bites">Quick bites</label>
-          <label class="filter-chip" for="cat-sweet">Something sweet</label>
-        </div>
-
-        <div class="menu-body">
-
-        <div class="menu-section is-coffee">
-          <h2 class="menu-heading">Coffee</h2>
-          <ul class="menu-list">
-            <li>
-              <div class="dish">
-                <span class="dish-name">Espresso</span>
-                <span class="dots"></span>
-                <span class="price">₹90</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Americano</span>
-                <span class="dots"></span>
-                <span class="price">₹110</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Cappuccino <span class="tag">Popular</span></span>
-                <span class="dots"></span>
-                <span class="price">₹140</span>
-              </div>
-              <p class="dish-desc">Beans from Chikmagalur, dusted with cocoa.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Cafe latte</span>
-                <span class="dots"></span>
-                <span class="price">₹150</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Mocha</span>
-                <span class="dots"></span>
-                <span class="price">₹170</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Cold coffee</span>
-                <span class="dots"></span>
-                <span class="price">₹160</span>
-              </div>
-              <p class="dish-desc">With a scoop of vanilla, add ₹30.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu-section is-chai">
-          <h2 class="menu-heading">Chai</h2>
-          <ul class="menu-list">
-            <li>
-              <div class="dish">
-                <span class="dish-name">Kadak chai</span>
-                <span class="dots"></span>
-                <span class="price">₹30</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Adrak chai <span class="tag">Popular</span></span>
-                <span class="dots"></span>
-                <span class="price">₹40</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Masala chai</span>
-                <span class="dots"></span>
-                <span class="price">₹50</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Lemon honey ginger</span>
-                <span class="dots"></span>
-                <span class="price">₹60</span>
-              </div>
-              <p class="dish-desc">The one to order when the weather turns.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Green tea</span>
-                <span class="dots"></span>
-                <span class="price">₹50</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu-section is-bites">
-          <h2 class="menu-heading">Quick bites</h2>
-          <ul class="menu-list">
-            <li>
-              <div class="dish">
-                <span class="dish-name">Plain maggi</span>
-                <span class="dots"></span>
-                <span class="price">₹40</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Veg maggi</span>
-                <span class="dots"></span>
-                <span class="price">₹60</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Cheese maggi <span class="tag">Popular</span></span>
-                <span class="dots"></span>
-                <span class="price">₹80</span>
-              </div>
-              <p class="dish-desc">Ask for it soupy. Trust us.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Steamed veg momos</span>
-                <span class="dots"></span>
-                <span class="price">₹80</span>
-              </div>
-              <p class="dish-desc">Eight pieces, red chutney on the side.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Fried paneer momos</span>
-                <span class="dots"></span>
-                <span class="price">₹110</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Grilled veg sandwich</span>
-                <span class="dots"></span>
-                <span class="price">₹90</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Bun maska</span>
-                <span class="dots"></span>
-                <span class="price">₹40</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Masala fries</span>
-                <span class="dots"></span>
-                <span class="price">₹90</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu-section is-sweet">
-          <h2 class="menu-heading">Something sweet</h2>
-          <ul class="menu-list">
-            <li>
-              <div class="dish">
-                <span class="dish-name">Chocolate brownie <span class="tag">Popular</span></span>
-                <span class="dots"></span>
-                <span class="price">₹120</span>
-              </div>
-              <p class="dish-desc">Served warm. Add a scoop of vanilla for ₹40.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Banana bread</span>
-                <span class="dots"></span>
-                <span class="price">₹80</span>
-              </div>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Oat cookies</span>
-                <span class="dots"></span>
-                <span class="price">₹30</span>
-              </div>
-              <p class="dish-desc">Baked every morning, gone by evening.</p>
-            </li>
-            <li>
-              <div class="dish">
-                <span class="dish-name">Gajar halwa <span class="tag">Winter only</span></span>
-                <span class="dots"></span>
-                <span class="price">₹90</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        </div>
-
-        <p class="note">The whole menu is vegetarian. Jain options on request.</p>
-
+      <div class="col-6 col-lg-3 text-lg-end">
+        <a class="btn btn-outline-light t-light-inline" href="book.html">Book a table</a>
+        <a class="btn btn-outline-light t-dark-inline" href="book.html#dusk">Book a table</a>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-foot">
-    <div class="container foot-grid">
-      <div>
-        <p class="foot-brand">Deodar<span class="brand-mark">.</span></p>
-        <p class="foot-addr">
-          Above the general store, Waknaghat main road,<br>
-          Solan, Himachal Pradesh 173234
-        </p>
-      </div>
-      <ul class="foot-links">
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book a table</a></li>
-      </ul>
     </div>
-    <div class="container foot-note">
-      <p>Deodar is a fictional cafe. This site is a front end practice project.</p>
-      <p>© 2026 Deodar Cafe</p>
-      <a class="top-link" href="#top">Back to top ↑</a>
+    <div class="d-flex flex-wrap justify-content-between gap-2 pt-3 border-top small text-light-faint" style="border-color:var(--line-deep) !important">
+      <p class="mb-0">Deodar is a fictional cafe. This site is a front end practice project. © 2026</p>
+      <p class="mb-0"><a href="#top">Back to top ↑</a></p>
     </div>
-  </footer>
+  </div>
+</footer>
 
+</div><!-- /.page -->
 </body>
 </html>
