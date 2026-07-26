@@ -3,165 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
   <title>Book a table · Deodar Cafe</title>
-  <meta name="description" content="Book a table at Deodar Cafe. A demo booking form built with plain HTML and CSS.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f5c46'/%3E%3Ctext x='50' y='72' font-size='58' font-weight='bold' text-anchor='middle' fill='%23f7f2ea' font-family='Georgia, serif'%3ED%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Book a table at Deodar Cafe. A demo booking form built with Bootstrap 5 CSS and no JavaScript.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
 </head>
-<body>
+<body id="top">
 
-  <a class="skip" href="#main">Skip to content</a>
+<!-- Theme anchors. A link to #dusk targets the second one, which flips every
+     token in theme.css. #day un-targets it. No JavaScript involved. -->
+<i class="theme-anchor" id="day"></i>
+<i class="theme-anchor" id="dusk"></i>
 
-  <header class="site-head" id="top">
-    <div class="container nav">
-      <a class="brand" href="index.html">Deodar<span class="brand-mark">.</span></a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="nav-cta" href="book.html" aria-current="page">Book a table</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div class="page">
 
-  <main id="main">
+<a class="skip" href="#main">Skip to content</a>
 
-    <section class="page-head">
-      <div class="container">
-        <p class="eyebrow">Book a table</p>
-        <h1>Save yourself the window seat.</h1>
-        <p class="lede">
-          Booking makes sense for groups of three or more, or on weekends.
-          Everyone else can usually just walk in.
-        </p>
-      </div>
-    </section>
+<nav class="navbar navbar-expand site-nav sticky-top" aria-label="Primary">
+  <div class="container-xxl">
+    <a class="navbar-brand brand t-light-inline" href="index.html">Deodar.</a>
+    <a class="navbar-brand brand t-dark-inline" href="index.html#dusk">Deodar.</a>
 
-    <section class="booking">
-      <div class="container">
-        <form class="book-form" action="#" method="get">
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-light-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link d-none d-sm-inline" href="about.html">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" aria-current="page" href="book.html">Book</a></li>
+    </ul>
 
-          <fieldset>
-            <legend>Who is coming</legend>
-            <div class="field">
-              <label for="name">Your name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field-row">
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" inputmode="numeric" pattern="[0-9]{10}" autocomplete="tel" required>
-                <p class="hint">Ten digits. We confirm bookings by call.</p>
-              </div>
-              <div class="field">
-                <label for="guests">Guests</label>
-                <input type="number" id="guests" name="guests" min="1" max="12" value="2" required>
-              </div>
-            </div>
-          </fieldset>
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-dark-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html#dusk">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="menu.html#dusk">Menu</a></li>
+      <li class="nav-item"><a class="nav-link d-none d-sm-inline" href="about.html#dusk">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" aria-current="page" href="book.html#dusk">Book</a></li>
+    </ul>
+      <span class="mode-switch ms-3" title="Day / dusk theme">
+        <span class="mode-label t-light-inline">Day</span>
+        <span class="mode-label t-dark-inline">Dusk</span>
+        <span class="switch-track" aria-hidden="true"><span class="switch-knob"></span></span>
+        <a class="switch-hit t-light-inline" href="#dusk" aria-label="Switch to the dusk theme"></a>
+        <a class="switch-hit t-dark-inline" href="#day" aria-label="Switch to the day theme"></a>
+      </span>
+  </div>
+</nav>
 
-          <fieldset>
-            <legend>When</legend>
-            <div class="field-row">
-              <div class="field">
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" required>
-              </div>
-              <div class="field">
-                <label for="time">Time</label>
-                <input type="time" id="time" name="time" min="08:30" max="21:30" required>
-                <p class="hint">Kitchen closes at ten, last seating at nine thirty.</p>
-              </div>
-            </div>
-            <div class="field">
-              <p class="choice-label">Seating</p>
-              <div class="choices">
-                <label class="choice"><input type="radio" name="seating" value="inside" checked> Inside</label>
-                <label class="choice"><input type="radio" name="seating" value="window"> Window, if free</label>
-                <label class="choice"><input type="radio" name="seating" value="balcony"> Balcony</label>
-              </div>
-            </div>
-          </fieldset>
+<main id="main">
 
-          <fieldset>
-            <legend>Anything else</legend>
-            <div class="field">
-              <label for="occasion">Occasion</label>
-              <select id="occasion" name="occasion">
-                <option value="">Nothing special</option>
-                <option>Birthday</option>
-                <option>Group study</option>
-                <option>First date</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="notes">Notes</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Allergies, cake you are bringing, anything we should know"></textarea>
-            </div>
-            <label class="choice"><input type="checkbox" name="stove" value="yes"> Seat us near the stove if it is lit</label>
-          </fieldset>
-
-          <button class="btn btn-submit" type="submit">Request a table</button>
-          <p class="hint">This is a demo form on a practice project, it does not send anything.</p>
-
-        </form>
-      </div>
-    </section>
-
-    <section class="faq">
-      <div class="container">
-        <h2 class="section-title">Small print, asked often</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Can we bring a cake?</summary>
-            <p>Yes. No cutting charge, but we will ask for a slice. Candles are fine, sparklers are not, the ceiling is wood.</p>
-          </details>
-          <details>
-            <summary>Do you take large groups?</summary>
-            <p>Up to twelve if you book a day ahead. Beyond that the room stops being fun for everyone else.</p>
-          </details>
-          <details>
-            <summary>Is there power at the tables?</summary>
-            <p>At six of them. Mention it in the notes if you are coming to work and we will keep one aside.</p>
-          </details>
-          <details>
-            <summary>What if we are late?</summary>
-            <p>We hold the table for twenty minutes. After that it goes to whoever has been eyeing it from the stairs.</p>
-          </details>
+  <section class="bg-dark-pine pt-5 pb-0">
+    <div class="container-xxl py-lg-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">Book a table</p>
+          <h1 class="mb-4">Save yourself the window seat.</h1>
+          <p class="lede text-light-soft mb-0">Booking makes sense for groups of three or more, or on weekends. Everyone else can usually just walk in.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end d-none d-lg-block">
+          <img class="ms-auto drift" src="images/chai-glass.svg" alt="" width="200" height="200" style="width:150px;height:150px">
         </div>
       </div>
-    </section>
+      <div class="pt-5"></div>
+    </div>
+    <div class="ridge-edge"></div>
+  </section>
 
-  </main>
+  <section class="py-5">
+    <div class="container-xxl py-lg-4">
+      <div class="row g-5">
 
-  <footer class="site-foot">
-    <div class="container foot-grid">
-      <div>
-        <p class="foot-brand">Deodar<span class="brand-mark">.</span></p>
-        <p class="foot-addr">
-          Above the general store, Waknaghat main road,<br>
-          Solan, Himachal Pradesh 173234
-        </p>
+        <div class="col-lg-7">
+          <form class="card p-4 p-md-5" action="#" method="post">
+
+            <fieldset class="mb-5">
+              <legend class="field-legend mb-4">Who is coming</legend>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6 field">
+                  <label class="form-label" for="name">Your name</label>
+                  <input class="form-control" type="text" id="name" name="name" placeholder="Full name" autocomplete="name" required>
+                </div>
+                <div class="col-md-6 field">
+                  <label class="form-label" for="phone">Phone</label>
+                  <input class="form-control" type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9\s]{10,12}" autocomplete="tel" required>
+                  <div class="form-text">Ten digits. We confirm bookings by call.</div>
+                </div>
+              </div>
+              <div class="field" style="max-width:12rem">
+                <label class="form-label" for="guests">Guests</label>
+                <input class="form-control" type="number" id="guests" name="guests" min="1" max="12" value="2" required>
+                <div class="form-text">Up to twelve.</div>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-5">
+              <legend class="field-legend mb-4">When</legend>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6 field">
+                  <label class="form-label" for="date">Date</label>
+                  <input class="form-control" type="date" id="date" name="date" required>
+                </div>
+                <div class="col-md-6 field">
+                  <label class="form-label" for="time">Time</label>
+                  <input class="form-control" type="time" id="time" name="time" min="08:30" max="21:30" step="900" required>
+                  <div class="form-text">Kitchen closes at ten, last seating at nine thirty.</div>
+                </div>
+              </div>
+              <span class="form-label d-block">Seating</span>
+              <div class="d-flex flex-wrap gap-2">
+                <input class="btn-check" type="radio" name="seating" id="seat-inside" value="inside" checked>
+                <label class="btn btn-outline-dark btn-sm" for="seat-inside">Inside</label>
+                <input class="btn-check" type="radio" name="seating" id="seat-window" value="window">
+                <label class="btn btn-outline-dark btn-sm" for="seat-window">Window, if free</label>
+                <input class="btn-check" type="radio" name="seating" id="seat-balcony" value="balcony">
+                <label class="btn btn-outline-dark btn-sm" for="seat-balcony">Balcony</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+              <legend class="field-legend mb-4">Anything else</legend>
+              <div class="mb-3 field" style="max-width:22rem">
+                <label class="form-label" for="occasion">Occasion</label>
+                <select class="form-select" id="occasion" name="occasion">
+                  <option value="">Nothing special</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="study">Group study</option>
+                  <option value="date">First date</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="form-label" for="notes">Notes</label>
+                <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Seat us near the stove if it is lit"></textarea>
+              </div>
+            </fieldset>
+
+            <div>
+              <button class="btn btn-primary btn-lg" type="submit">Request a table</button>
+              <p class="form-text mt-3 mb-0">This is a demo form on a practice project, it does not send anything.</p>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="sticky-media">
+            <aside class="receipt p-4 p-xl-5 mb-4">
+              <p class="eyebrow mb-4">Before you book</p>
+              <dl class="mb-0">
+              <div class="receipt-row"><dt class="mb-0">Last seating</dt><dd>9:30 pm</dd></div>
+              <div class="receipt-row"><dt class="mb-0">We hold your table</dt><dd>20 minutes</dd></div>
+              <div class="receipt-row"><dt class="mb-0">Largest group</dt><dd>12, a day ahead</dd></div>
+              <div class="receipt-row"><dt class="mb-0">Quietest hour</dt><dd>3:00 pm</dd></div>
+              <div class="receipt-row"><dt class="mb-0">Tables with a plug</dt><dd>6 of 15</dd></div>
+              </dl>
+              <p class="small text-soft mt-4 mb-0">Walk-ins are always welcome. This form just means the good table is waiting for you.</p>
+            </aside>
+            <div class="card card-dark bg-dark-pine">
+              <div class="card-body p-4 text-center">
+                <img class="illo-lg mx-auto mb-3" src="images/cookie.svg" alt="" width="200" height="200">
+                <p class="serif-italic mb-0" style="font-size:1.2rem;color:#fdf8ee">Book before four and there is a decent chance the cookies are still warm.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <ul class="foot-links">
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book a table</a></li>
-      </ul>
     </div>
-    <div class="container foot-note">
-      <p>Deodar is a fictional cafe. This site is a front end practice project.</p>
-      <p>© 2026 Deodar Cafe</p>
-      <a class="top-link" href="#top">Back to top ↑</a>
-    </div>
-  </footer>
+  </section>
 
+  <section class="py-5 bg-warm border-top border-bottom">
+    <div class="container py-lg-4" style="max-width:48rem">
+      <p class="eyebrow">Small print</p>
+      <h2 class="mb-5">Asked often enough</h2>
+      <details class="faq-item">
+        <summary>Can we bring a cake?</summary>
+        <p class="text-soft mt-3 mb-0">Yes. No cutting charge, but we will ask for a slice. Candles are fine, sparklers are not, the ceiling is wood.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you take large groups?</summary>
+        <p class="text-soft mt-3 mb-0">Up to twelve if you book a day ahead. Beyond that the room stops being fun for everyone else.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there power at the tables?</summary>
+        <p class="text-soft mt-3 mb-0">At six of them. Mention it in the notes if you are coming to work and we will keep one aside.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if we are late?</summary>
+        <p class="text-soft mt-3 mb-0">We hold the table for twenty minutes. After that it goes to whoever has been eyeing it from the stairs.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer pt-5 pb-4">
+  <div class="container-xxl">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-5">
+        <span class="brand d-block" style="font-size:1.6rem">Deodar.</span>
+        <address class="mt-3 mb-0 small text-light-faint" style="font-style:normal">Above the general store, Waknaghat main road,<br>Solan, Himachal Pradesh 173234</address>
+      </div>
+      <div class="col-6 col-lg-4">
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-light-grid">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book a table</a></li>
+        </ul>
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-dark-grid">
+          <li><a href="menu.html#dusk">Menu</a></li>
+          <li><a href="about.html#dusk">About</a></li>
+          <li><a href="book.html#dusk">Book a table</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3 text-lg-end">
+        <a class="btn btn-outline-light t-light-inline" href="book.html">Book a table</a>
+        <a class="btn btn-outline-light t-dark-inline" href="book.html#dusk">Book a table</a>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-between gap-2 pt-3 border-top small text-light-faint" style="border-color:var(--line-deep) !important">
+      <p class="mb-0">Deodar is a fictional cafe. This site is a front end practice project. © 2026</p>
+      <p class="mb-0"><a href="#top">Back to top ↑</a></p>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
 </body>
 </html>
