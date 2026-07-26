@@ -3,206 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
   <title>About · Deodar Cafe</title>
   <meta name="description" content="The story of Deodar Cafe, the house rules and drawings from the counter.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f5c46'/%3E%3Ctext x='50' y='72' font-size='58' font-weight='bold' text-anchor='middle' fill='%23f7f2ea' font-family='Georgia, serif'%3ED%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
 </head>
-<body>
+<body id="top">
 
-  <a class="skip" href="#main">Skip to content</a>
+<!-- Theme anchors. A link to #dusk targets the second one, which flips every
+     token in theme.css. #day un-targets it. No JavaScript involved. -->
+<i class="theme-anchor" id="day"></i>
+<i class="theme-anchor" id="dusk"></i>
 
-  <header class="site-head" id="top">
-    <div class="container nav">
-      <a class="brand" href="index.html">Deodar<span class="brand-mark">.</span></a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+<div class="page">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="navbar navbar-expand site-nav sticky-top" aria-label="Primary">
+  <div class="container-xxl">
+    <a class="navbar-brand brand t-light-inline" href="index.html">Deodar.</a>
+    <a class="navbar-brand brand t-dark-inline" href="index.html#dusk">Deodar.</a>
+
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-light-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link active d-none d-sm-inline" aria-current="page" href="about.html">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" href="book.html">Book</a></li>
+    </ul>
+
+    <ul class="navbar-nav flex-row align-items-center gap-3 gap-md-4 ms-auto t-dark-flex">
+      <li class="nav-item"><a class="nav-link" href="index.html#dusk">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="menu.html#dusk">Menu</a></li>
+      <li class="nav-item"><a class="nav-link active d-none d-sm-inline" aria-current="page" href="about.html#dusk">About</a></li>
+      <li class="nav-item"><a class="btn btn-primary btn-sm" href="book.html#dusk">Book</a></li>
+    </ul>
+      <span class="mode-switch ms-3" title="Day / dusk theme">
+        <span class="mode-label t-light-inline">Day</span>
+        <span class="mode-label t-dark-inline">Dusk</span>
+        <span class="switch-track" aria-hidden="true"><span class="switch-knob"></span></span>
+        <a class="switch-hit t-light-inline" href="#dusk" aria-label="Switch to the dusk theme"></a>
+        <a class="switch-hit t-dark-inline" href="#day" aria-label="Switch to the day theme"></a>
+      </span>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="bg-dark-pine pt-5 pb-0">
+    <div class="container-xxl py-lg-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">About us</p>
+          <h1 class="mb-4">A front room, a stove, and a lot of chai.</h1>
+          <p class="lede text-light-soft mb-0">Two cousins, one second hand espresso machine, and a room that used to be a tailor's shop.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end d-none d-lg-block">
+          <img class="ms-auto drift" src="images/coffee-cup.svg" alt="" width="200" height="200" style="width:150px;height:150px">
+        </div>
+      </div>
+      <div class="pt-5"></div>
+    </div>
+    <div class="ridge-edge"></div>
+  </section>
+
+  <!-- Story --------------------------------------------------------------- -->
+  <section class="py-5">
+    <div class="container-xxl py-lg-4">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <span class="counter-index">01</span>
+          <h2 class="mt-2 mb-4">How it started</h2>
+          <p class="text-soft">Deodar opened in 2024 in what used to be a tailor's shop, one floor up from the general store. Two cousins, one second hand espresso machine from a closed down hotel in Shimla, and six tables.</p>
+          <p class="text-soft mb-0">The name comes from the deodar trees on the ridge behind the building. On a clear morning you can see them from the window seats, which is most of the reason people fight over the window seats.</p>
+        </div>
+        <div class="col-lg-6">
+          <span class="counter-index">02</span>
+          <h2 class="mt-2 mb-4">How it is going</h2>
+          <p class="text-soft">Fifteen tables now, a proper kitchen, and a regular crowd of students from the university down the road. Half the menu exists because someone asked for it enough times.</p>
+          <p class="text-soft mb-0">We still grind every cup to order, and we still burn one batch of cookies about once a month. Some things you fix, some things become tradition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- House rules --------------------------------------------------------- -->
+  <section class="py-5 bg-warm border-top border-bottom">
+    <div class="container-xxl py-lg-4">
+      <div class="row align-items-end g-3 mb-5">
+        <div class="col-md-8">
+          <p class="eyebrow">Four of them, that is all</p>
+          <h2 class="mb-0">House rules</h2>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="small text-soft mb-0">Nobody has broken rule four yet.</p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col"><div class="card card-lift h-100"><div class="card-body p-4 p-xl-5">
+          <span class="counter-index">01</span>
+          <h3 class="mt-2 mb-2">Order at the counter</h3>
+          <p class="text-soft mb-0">We are a small team. Order at the counter and we bring it over when it is ready.</p>
+        </div></div></div>
+        <div class="col"><div class="card card-lift h-100"><div class="card-body p-4 p-xl-5">
+          <span class="counter-index">02</span>
+          <h3 class="mt-2 mb-2">Water is self service</h3>
+          <p class="text-soft mb-0">The matka is by the stairs, glasses on the shelf above it.</p>
+        </div></div></div>
+        <div class="col"><div class="card card-lift h-100"><div class="card-body p-4 p-xl-5">
+          <span class="counter-index">03</span>
+          <h3 class="mt-2 mb-2">Sit as long as you like</h3>
+          <p class="text-soft mb-0">Just keep something on the table if the room is full. An oat cookie counts.</p>
+        </div></div></div>
+        <div class="col"><div class="card card-lift h-100"><div class="card-body p-4 p-xl-5">
+          <span class="counter-index">04</span>
+          <h3 class="mt-2 mb-2">Calls go to the balcony</h3>
+          <p class="text-soft mb-0">The network is better out there anyway.</p>
+        </div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery ------------------------------------------------------------- -->
+  <section class="py-5" id="gallery">
+    <div class="container-xxl py-lg-4">
+      <p class="eyebrow">From the counter</p>
+      <h2 class="mb-3">Drawings, not photographs</h2>
+      <p class="text-soft mb-5" style="max-width:48ch">None of our photos do the food justice, so we drew it instead. Click any one to see it larger.</p>
+
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-coffee"><img class="img-fluid" src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">The cappuccino</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-chai"><img class="img-fluid" src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Adrak chai</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-momos"><img class="img-fluid" src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Steamed momos</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-maggi"><img class="img-fluid" src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Cheese maggi</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-sandwich"><img class="img-fluid" src="images/sandwich.svg" alt="Drawing of a grilled sandwich" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Grilled sandwich</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-brownie"><img class="img-fluid" src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">The brownie</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-cookie"><img class="img-fluid" src="images/cookie.svg" alt="Drawing of an oat cookie" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Oat cookies</figcaption>
+        </figure></div>
+        <div class="col"><figure class="text-center mb-0">
+          <a class="card card-lift d-block p-3" href="#shot-halwa"><img class="img-fluid" src="images/halwa.svg" alt="Drawing of a bowl of gajar halwa" width="200" height="200"></a>
+          <figcaption class="mt-2 serif" style="font-size:1.1rem">Gajar halwa</figcaption>
+        </figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-pine py-5">
+    <div class="container text-center py-lg-4" style="max-width:46rem">
+      <p class="text-mustard fs-4 mb-3">✦</p>
+      <p class="serif-italic mb-4" style="font-size:clamp(1.5rem,1rem + 2vw,2.4rem);line-height:1.25;color:#fdf8ee">Come up the stairs. We will find you a table.</p>
+      <a class="btn btn-primary btn-lg t-light-inline" href="book.html">Book a table</a>
+      <a class="btn btn-primary btn-lg t-dark-inline" href="book.html#dusk">Book a table</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightboxes: :target only, no JavaScript ------------------------------- -->
+<div class="shot" id="shot-coffee"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">The cappuccino, ₹140</figcaption></figure></div>
+<div class="shot" id="shot-chai"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Adrak chai, ₹40</figcaption></figure></div>
+<div class="shot" id="shot-momos"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Steamed veg momos, ₹80</figcaption></figure></div>
+<div class="shot" id="shot-maggi"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Cheese maggi, ₹80</figcaption></figure></div>
+<div class="shot" id="shot-sandwich"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/sandwich.svg" alt="Drawing of a grilled sandwich" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Grilled veg sandwich, ₹90</figcaption></figure></div>
+<div class="shot" id="shot-brownie"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Chocolate brownie, ₹120</figcaption></figure></div>
+<div class="shot" id="shot-cookie"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/cookie.svg" alt="Drawing of an oat cookie" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Oat cookies, ₹30</figcaption></figure></div>
+<div class="shot" id="shot-halwa"><a class="shot__scrim" href="#gallery" aria-label="Close"></a><figure class="shot__panel mb-0"><a class="shot__close" href="#gallery" aria-label="Close">×</a><img class="img-fluid" src="images/halwa.svg" alt="Drawing of a bowl of gajar halwa" width="200" height="200"><figcaption class="serif mt-2" style="font-size:1.2rem">Gajar halwa, ₹90</figcaption></figure></div>
+
+<footer class="site-footer pt-5 pb-4">
+  <div class="container-xxl">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-5">
+        <span class="brand d-block" style="font-size:1.6rem">Deodar.</span>
+        <address class="mt-3 mb-0 small text-light-faint" style="font-style:normal">Above the general store, Waknaghat main road,<br>Solan, Himachal Pradesh 173234</address>
+      </div>
+      <div class="col-6 col-lg-4">
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-light-grid">
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a class="nav-cta" href="book.html">Book a table</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book a table</a></li>
         </ul>
-      </nav>
+        <ul class="list-unstyled d-grid gap-2 mb-0 t-dark-grid">
+          <li><a href="menu.html#dusk">Menu</a></li>
+          <li><a href="about.html#dusk">About</a></li>
+          <li><a href="book.html#dusk">Book a table</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3 text-lg-end">
+        <a class="btn btn-outline-light t-light-inline" href="book.html">Book a table</a>
+        <a class="btn btn-outline-light t-dark-inline" href="book.html#dusk">Book a table</a>
+      </div>
     </div>
-  </header>
-
-  <main id="main">
-
-    <section class="page-head">
-      <div class="container">
-        <p class="eyebrow">About us</p>
-        <h1>A front room, a stove, and a lot of chai.</h1>
-      </div>
-    </section>
-
-    <section class="story">
-      <div class="container story-grid">
-        <div class="story-col">
-          <h2 class="section-title">How it started</h2>
-          <p>
-            Deodar opened in 2024 in what used to be a tailor's shop, one floor
-            up from the general store. Two cousins, one second hand espresso
-            machine from a closed down hotel in Shimla, and six tables.
-          </p>
-          <p>
-            The name comes from the deodar trees on the ridge behind the
-            building. On a clear morning you can see them from the window
-            seats, which is most of the reason people fight over the window
-            seats.
-          </p>
-        </div>
-        <div class="story-col">
-          <h2 class="section-title">How it is going</h2>
-          <p>
-            Fifteen tables now, a proper kitchen, and a regular crowd of
-            students from the university down the road. Half the menu exists
-            because someone asked for it enough times.
-          </p>
-          <p>
-            We still grind every cup to order, and we still burn one batch of
-            cookies about once a month. Some things you fix, some things become
-            tradition.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="rules">
-      <div class="container">
-        <h2 class="section-title">House rules</h2>
-        <div class="rules-grid">
-          <article class="rule">
-            <h3>Order at the counter</h3>
-            <p>We are a small team. Order at the counter and we bring it over when it is ready.</p>
-          </article>
-          <article class="rule">
-            <h3>Water is self service</h3>
-            <p>The matka is by the stairs, glasses on the shelf above it.</p>
-          </article>
-          <article class="rule">
-            <h3>Sit as long as you like</h3>
-            <p>Just keep something on the table if the room is full. An oat cookie counts.</p>
-          </article>
-          <article class="rule">
-            <h3>Calls go to the balcony</h3>
-            <p>The network is better out there anyway.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery" id="gallery">
-      <div class="container">
-        <h2 class="section-title">From the counter</h2>
-        <p class="note">Drawings by us, since none of our photos do the food justice.</p>
-        <div class="gallery-grid">
-          <figure class="tile">
-            <a class="tile-link" href="#shot-coffee" aria-label="Open the cappuccino drawing">
-              <img src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200">
-            </a>
-            <figcaption>The cappuccino</figcaption>
-          </figure>
-          <figure class="tile">
-            <a class="tile-link" href="#shot-chai" aria-label="Open the adrak chai drawing">
-              <img src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200">
-            </a>
-            <figcaption>Adrak chai</figcaption>
-          </figure>
-          <figure class="tile">
-            <a class="tile-link" href="#shot-momos" aria-label="Open the momos drawing">
-              <img src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200">
-            </a>
-            <figcaption>Steamed momos</figcaption>
-          </figure>
-          <figure class="tile">
-            <a class="tile-link" href="#shot-maggi" aria-label="Open the cheese maggi drawing">
-              <img src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200">
-            </a>
-            <figcaption>Cheese maggi</figcaption>
-          </figure>
-          <figure class="tile">
-            <a class="tile-link" href="#shot-brownie" aria-label="Open the brownie drawing">
-              <img src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200">
-            </a>
-            <figcaption>The brownie</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- each one opens when its id is in the address bar, closed again by the x -->
-      <div class="lightbox" id="shot-coffee">
-        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
-        <figure class="lightbox-inner">
-          <img src="images/coffee-cup.svg" alt="Drawing of a steaming coffee cup" width="200" height="200">
-          <figcaption>The cappuccino, ₹140</figcaption>
-        </figure>
-        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
-      </div>
-
-      <div class="lightbox" id="shot-chai">
-        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
-        <figure class="lightbox-inner">
-          <img src="images/chai-glass.svg" alt="Drawing of a glass of chai" width="200" height="200">
-          <figcaption>Adrak chai, ₹40</figcaption>
-        </figure>
-        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
-      </div>
-
-      <div class="lightbox" id="shot-momos">
-        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
-        <figure class="lightbox-inner">
-          <img src="images/momos.svg" alt="Drawing of a plate of momos with chutney" width="200" height="200">
-          <figcaption>Steamed veg momos, ₹80</figcaption>
-        </figure>
-        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
-      </div>
-
-      <div class="lightbox" id="shot-maggi">
-        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
-        <figure class="lightbox-inner">
-          <img src="images/maggi-bowl.svg" alt="Drawing of a steaming bowl of maggi" width="200" height="200">
-          <figcaption>Cheese maggi, ₹80</figcaption>
-        </figure>
-        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
-      </div>
-
-      <div class="lightbox" id="shot-brownie">
-        <a class="lightbox-back" href="#gallery" aria-label="Close"></a>
-        <figure class="lightbox-inner">
-          <img src="images/brownie.svg" alt="Drawing of a brownie with a scoop of ice cream" width="200" height="200">
-          <figcaption>Chocolate brownie, ₹120</figcaption>
-        </figure>
-        <a class="lightbox-close" href="#gallery" aria-label="Close">×</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-foot">
-    <div class="container foot-grid">
-      <div>
-        <p class="foot-brand">Deodar<span class="brand-mark">.</span></p>
-        <p class="foot-addr">
-          Above the general store, Waknaghat main road,<br>
-          Solan, Himachal Pradesh 173234
-        </p>
-      </div>
-      <ul class="foot-links">
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="book.html">Book a table</a></li>
-      </ul>
+    <div class="d-flex flex-wrap justify-content-between gap-2 pt-3 border-top small text-light-faint" style="border-color:var(--line-deep) !important">
+      <p class="mb-0">Deodar is a fictional cafe. This site is a front end practice project. © 2026</p>
+      <p class="mb-0"><a href="#top">Back to top ↑</a></p>
     </div>
-    <div class="container foot-note">
-      <p>Deodar is a fictional cafe. This site is a front end practice project.</p>
-      <p>© 2026 Deodar Cafe</p>
-      <a class="top-link" href="#top">Back to top ↑</a>
-    </div>
-  </footer>
+  </div>
+</footer>
 
+</div><!-- /.page -->
 </body>
 </html>
