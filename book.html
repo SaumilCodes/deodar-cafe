@@ -108,7 +108,9 @@
               <div class="row g-3 mb-4">
                 <div class="col-md-6 field">
                   <label class="form-label" for="date">Date</label>
-                  <input class="form-control" type="date" id="date" name="date" required>
+                  <input class="form-control" type="date" id="date" name="date"
+                         min="2026-08-19" max="2026-11-30" required>
+                  <div class="form-text">We take bookings up to three months ahead.</div>
                 </div>
                 <div class="col-md-6 field">
                   <label class="form-label" for="time">Time</label>
